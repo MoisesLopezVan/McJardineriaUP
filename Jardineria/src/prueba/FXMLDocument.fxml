@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="843.0" prefWidth="1148.0" style="-fx-background-color: #9C2B27;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prueba.FXMLDocumentController">
+    <children>
+      <AnchorPane fx:id="ventana_inicio" layoutX="-4.0" layoutY="-7.0" prefHeight="828.0" prefWidth="1145.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <Label layoutX="515.0" layoutY="117.0" text="Login" textFill="#fcf9f9">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Label>
+            <Button layoutX="513.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnIngresarAction" style="-fx-background-color: #E45652;" text="Ingresar" textFill="#f2f0f0">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <TextField fx:id="textuser" layoutX="438.0" layoutY="223.0" prefHeight="35.0" prefWidth="275.0" promptText="Usuario" />
+            <PasswordField fx:id="textpassword" layoutX="438.0" layoutY="301.0" prefHeight="30.0" prefWidth="275.0" promptText="Contraseña" />
+            <ComboBox fx:id="combo" layoutX="787.0" layoutY="286.0" prefWidth="150.0" />
+            <Label layoutX="787.0" layoutY="225.0" text="Selecciona el manejador" textFill="#00c5ff">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Button layoutX="149.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnPresentacionAction" style="-fx-background-color: #E45652;" text="Presentación" textFill="#f8f4f4">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label layoutX="107.0" layoutY="117.0" text="MCJardineríaUP" textFill="#f5f4f4">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="ventana_agregarProducto" layoutX="-336.0" layoutY="66.0" prefHeight="829.0" prefWidth="1148.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutY="14.0" prefHeight="40.0" prefWidth="916.0" style="-fx-background-color: black;" text="Agregando Producto" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgProducto" fitHeight="400.0" fitWidth="532.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/fondo-Agrego1.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="558.0" layoutY="93.0" text="Nombre del producto:" textFill="#0332eb">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="185.0" text="Tipo producto:" textFill="#041feb">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="559.0" layoutY="268.0" text="Condicion actual" textFill="#0009ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="508.0" layoutY="370.0" />
+            <Label layoutX="559.0" layoutY="355.0" prefHeight="30.0" prefWidth="163.0" text="Fecha de ingreso" textFill="#0707ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textNombre" layoutX="558.0" layoutY="135.0" prefHeight="31.0" prefWidth="249.0" promptText="Ingrese un nombre" />
+            <TextField fx:id="textCondicion" layoutX="558.0" layoutY="298.0" prefHeight="31.0" prefWidth="249.0" promptText="Ingrese una condicion actual" />
+            <DatePicker layoutX="559.0" layoutY="391.0" promptText="Eliga una fecha" />
+            <ComboBox layoutX="558.0" layoutY="228.0" prefHeight="31.0" prefWidth="249.0" promptText="Seleccionar un tipo producto" />
+            <Button fx:id="btnAgregarP" layoutX="559.0" layoutY="474.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Agregar" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="300.0" fitWidth="317.0" layoutX="102.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_menu" layoutX="-11.0" layoutY="-6.0" prefHeight="843.0" prefWidth="1148.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TabPane layoutX="6.0" layoutY="56.0" prefHeight="784.0" prefWidth="1145.0" style="-fx-background-color: write;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="btnTP" text="Tipos de Producto -&gt; (TP)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="751.0" prefWidth="1155.0" style="-fx-background-color: write;">
+                     <children>
+                        <Pane layoutX="-3.0" layoutY="7.0" prefHeight="843.0" prefWidth="1148.0" style="-fx-background-color: white;">
+                           <children>
+                              <ListView fx:id="listViewTP" layoutY="46.0" prefHeight="694.0" prefWidth="1145.0" style="-fx-background-image: fondo-listado;" visible="false" />
+                              <Label alignment="CENTER" prefHeight="47.0" prefWidth="1145.0" style="-fx-background-color: black;" text="Listado Tipo de Producto" textFill="WHITE">
+                                 <font>
+                                  
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tablaTipoProducto" layoutX="496.0" layoutY="109.0" prefHeight="587.0" prefWidth="249.0">
+                                <columns>
+                                  <TableColumn fx:id="txtIdCTP" prefWidth="111.0" text="ID" />
+                                  <TableColumn fx:id="txtCTP" prefWidth="137.0" text="Tipo de Producto" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnlistT" layoutX="930.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnlistTAction" onMouseClicked="#btnlistTAction" style="-fx-background-color: aqua;" text="Agregar Nuevo" />
+                                    <Button fx:id="btnEditarTP" layoutX="843.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnEditarTP" style="-fx-background-color: red;" text="Editar" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnEliminarTP" layoutX="843.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnEliminarTPAction" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnEliminarCon" layoutX="956.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEliminarConAction" style="-fx-background-color: yellow;" text="Continuar" textFill="#d01717">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font></Button>
+                                    <TextField fx:id="txtIdEliminar" layoutX="829.0" layoutY="387.0" />
+                                    <Button fx:id="btnEditarTipo" layoutX="829.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEditarTipo" style="-fx-background-color: yellow;" text="Continuar" textFill="#ae3d3d">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnActualizarTP" layoutX="843.0" layoutY="278.0" mnemonicParsing="false" onAction="#btnActualizarTP" style="-fx-background-color: red;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="btnP" onSelectionChanged="#btnP" text="Producto -&gt; (P)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listViewP" layoutX="7.0" layoutY="33.0" prefHeight="698.0" prefWidth="1148.0" />
+                        <Label alignment="CENTER" layoutX="-3.0" layoutY="4.0" prefHeight="43.0" prefWidth="1145.0" style="-fx-background-color: black;" text="Listado Producto" textFill="#fff8f8">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <Button fx:id="btnlistP" layoutX="890.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnlistPAction" onMouseClicked="#btnlistPAction" style="-fx-background-color: aqua;" text="Agregar nuevo" />
+                        <TableView fx:id="tablaProducto" layoutX="107.0" layoutY="153.0" prefHeight="439.0" prefWidth="821.0">
+                          <columns>
+                            <TableColumn fx:id="txtIdCP" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="txtCNombreP" prefWidth="104.0" text="Nombre" />
+                              <TableColumn fx:id="txtCTipoProducto" prefWidth="169.0" text="Tipo de Producto" />
+                              <TableColumn fx:id="txtCCondicionActual" prefWidth="160.0" text="Condicion Actual" />
+                              <TableColumn fx:id="txtCFechaIngreso" prefWidth="181.0" text="Fecha de Ingreso" />
+                                    <TableColumn fx:id="txtCId_Tipo" prefWidth="131.0" text="Id_Tipo" />
+                          </columns>
+                        </TableView>
+                              <Button fx:id="btnEditarP" layoutX="1009.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnEditarP" style="-fx-background-color: red;" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnEliminarP" layoutX="1009.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnEliminarP" style="-fx-background-color: red;" text="Eliminar " textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="txtIdProducto" layoutX="955.0" layoutY="404.0" />
+                              <Button fx:id="btnEditarProducto" layoutX="992.0" layoutY="522.0" mnemonicParsing="false" onAction="#btnEditarProducto" style="-fx-background-color: yellow;" text="Continuar" textFill="#b24d4d">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarProducto" layoutX="991.0" layoutY="454.0" mnemonicParsing="false" onAction="#btnEliminarProdu" style="-fx-background-color: yellow;" text="Continuar" textFill="#653939">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnActualizarP" layoutX="1009.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnActualizarP" style="-fx-background-color: red;" text="Actualizar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="btnRR" onSelectionChanged="#btnRR" text="Registro de Riego -&gt; (RR)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listViewRR" layoutY="47.0" prefHeight="697.0" prefWidth="1145.0" />
+                        <Label alignment="CENTER" layoutX="1.0" prefHeight="45.0" prefWidth="1145.0" style="-fx-background-color: black;" text="Listado Registro de Riego" textFill="#fcfcfc">
+                           <font>
+                            
+                           </font>
+                        </Label>
+                        <Button fx:id="btnlistRR" layoutX="892.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnlistRRAction" onMouseClicked="#btnlistRRAction" style="-fx-background-color: aqua;" text="Agregar nuevo" />
+                        <TableView fx:id="tablaRegistroRiego" layoutX="265.0" layoutY="96.0" prefHeight="599.0" prefWidth="504.0">
+                          <columns>
+                            <TableColumn fx:id="txtIdCRiego" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="txtCFechaRegistro" prefWidth="157.0" text="Fecha Riego" />
+                                    <TableColumn fx:id="txtCProductoRiego" prefWidth="158.0" text="Producto" />
+                                    <TableColumn fx:id="txtCId_ProductoR" prefWidth="113.0" text="Id_Producto" />
+                          </columns>
+                        </TableView>
+                              <Button fx:id="btnEditarRiego" layoutX="922.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnEditarRiego" style="-fx-background-color: red;" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarRiego" layoutX="922.0" layoutY="224.0" mnemonicParsing="false" onAction="#btnEliminarRiego" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEditarRiegoContinuar" layoutX="820.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnEditarRiegoContinuar" style="-fx-background-color: yellow;" text="Continuar" textFill="#a14949">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarRiegoContinuar" layoutX="990.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnEliminarRiegoContinuar" style="-fx-background-color: yellow;" text="Continuar" textFill="#8d2c2c">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <TextField fx:id="txtIdRegistroRiego" layoutX="878.0" layoutY="304.0" />
+                              <Button fx:id="btnActualizarRR" layoutX="922.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnActualizarRR" style="-fx-background-color: red;" text="Actualizar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="btnHF" onSelectionChanged="#btnHF" text="Historial de Fotografia -&gt; (HF)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listViewHF" layoutX="14.0" layoutY="-29.0" prefHeight="694.0" prefWidth="1145.0" />
+                        <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="47.0" prefWidth="1145.0" style="-fx-background-color: black;" text="Listado Historial de Fotografia" textFill="WHITE">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablaHistorial" layoutX="134.0" layoutY="81.0" prefHeight="584.0" prefWidth="691.0">
+                          <columns>
+                            <TableColumn fx:id="txtIdCHistorial" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="txtCFechaHistorial" prefWidth="156.0" text="FechaHistorial" />
+                                    <TableColumn fx:id="txtCUrlHistorial" prefWidth="116.0" text="Url Imagen" />
+                                    <TableColumn fx:id="txtCId_ProductoH" prefWidth="157.0" text="id_Producto" />
+                                    <TableColumn fx:id="txtCProductoHistorial" prefWidth="189.0" text="Producto" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnlistHAction" layoutX="984.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#btnlistHAction" style="-fx-background-color: aqua;" text="Agregar Nuevo" />
+                              <TextField fx:id="txtIdHistorialFoto" layoutX="932.0" layoutY="373.0" />
+                              <Button fx:id="btnEditarH" layoutX="936.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnEditarH" style="-fx-background-color: red;" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEditarHistorial" layoutX="875.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnEditarHistorial" style="-fx-background-color: yellow;" text="Continuar" textFill="#9e1414">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarH" layoutX="935.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnEliminarH" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnEliminarHistorial" layoutX="1015.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnEliminarHistorial" style="-fx-background-color: yellow;" text="Continuar" textFill="#862727">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Button>
+                              <Button fx:id="btnActualizarH" layoutX="935.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnActualizarH" style="-fx-background-color: red;" text="Actualizar" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Reportes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="-2.0" layoutY="1.0" prefHeight="742.0" prefWidth="1145.0">
+                           <children>
+                              <Label alignment="CENTER" layoutY="4.0" prefHeight="53.0" prefWidth="1145.0" style="-fx-background-color: black;" text="Reportes de Grafica" textFill="#fffbfb">
+                                 <font>
+                                    
+                                 </font>
+                              </Label>
+                              <Button layoutX="924.0" layoutY="82.0" mnemonicParsing="false" onAction="#btnCerrar" onMouseClicked="#btnCerrar" style="-fx-background-color: aqua;" text="Cerrar Sesion" />
+                              <LineChart fx:id="grafSentencia" layoutX="29.0" layoutY="80.0" prefHeight="601.0" prefWidth="737.0">
+                                <xAxis>
+                                  <CategoryAxis fx:id="Eje" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                              <Button layoutX="828.0" layoutY="159.0" mnemonicParsing="false" onAction="#btnreporteTP" style="-fx-background-color: red;" text="Graficar Rep. Tipo de Producto" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="895.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnReporteP" style="-fx-background-color: red;" text="Graficar Rep. Producto" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="819.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnReporteRR" style="-fx-background-color: red;" text="Graficar Rep. Registro de Riego" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="784.0" layoutY="389.0" mnemonicParsing="false" onAction="#btnReporteHF" style="-fx-background-color: red;" text="Graficar Rep. Historial de Fotografia" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="251.0" fitWidth="333.0" layoutX="778.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/fondo-Grafica.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="lblBienvenido" alignment="CENTER" layoutX="5.0" layoutY="2.0" prefHeight="53.0" prefWidth="1145.0" style="-fx-background-color: red;" text="MC. JARDINERIA UP" textAlignment="CENTER" textFill="#2c2323">
+         <font>
+           
+         </font>
+      </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_agregarTipo" prefHeight="889.0" prefWidth="1163.0" style="-fx-background-color: write;" visible="false">
+            <children>
+      <Button fx:id="btnAgregarTipo" layoutX="494.0" layoutY="415.0" mnemonicParsing="false" onAction="#btnAgregarTipoProducto" style="-fx-background-color: red;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="495.0" layoutY="281.0" text="Tipo de producto:" textFill="#1f06ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgProducto" fitHeight="535.0" fitWidth="370.0" layoutX="42.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/fondo-Agrego.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textTipo" layoutX="494.0" layoutY="329.0" prefHeight="41.0" prefWidth="393.0" promptText="Ingrese un tipo  Producto" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="56.0" prefWidth="1003.0" style="-fx-background-color: black;" text="Agregando Tipo de Producto" textFill="#fffefe">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+            <Button fx:id="btnEditarContinuar" layoutX="685.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnEditarContinuar" text="Editar" />
+   </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_registroRiego" prefHeight="889.0" prefWidth="1163.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutY="26.0" prefHeight="53.0" prefWidth="889.0" style="-fx-background-color: black;" text="Agregando Registro de Riego" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgRiego" fitHeight="480.0" fitWidth="482.0" layoutX="204.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/fondo-Agrego3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="491.0" layoutY="120.0" />
+      <Label layoutX="239.0" layoutY="172.0" text="Fecha de Riego:" textFill="#0400ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+      <DatePicker fx:id="textDataRiego" layoutX="402.0" layoutY="172.0" promptText="Eliga una fecha" />
+      <Label layoutX="239.0" layoutY="131.0" text="Seleccione producto">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo2" layoutX="416.0" layoutY="129.0" prefHeight="31.0" prefWidth="218.0" promptText="Seleccionar un producto" />
+      <Button fx:id="btnAgregarR" layoutX="712.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnAgregarRiego" style="-fx-background-color: red;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+            <Button fx:id="btnEditarContinuarRiego" layoutX="870.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnEditarContinuarRiego" text="Editar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_registroHistorial" layoutX="-19.0" layoutY="-38.0" prefHeight="888.0" prefWidth="1159.0" visible="false">
+         <children>
+            <DatePicker fx:id="textDateHistorial" layoutX="217.0" layoutY="139.0" promptText="Eliga una fecha" />
+      <Button fx:id="btnSeleccionarImagen" layoutX="68.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnSeleccionarImagen" style="-fx-background-color: black;" text="Seleccionar imagen" textFill="RED" />
+      <Label alignment="CENTER" layoutX="76.0" layoutY="276.0" text="Fotografia:" textFill="#2f00ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="77.0" layoutY="139.0" text="Fecha historial:" textFill="#002bff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="40.0" prefHeight="51.0" prefWidth="924.0" style="-fx-background-color: black;" text="Agregando Historial de Fotografia" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="urlHistorial" layoutX="217.0" layoutY="276.0" prefHeight="31.0" prefWidth="218.0" promptText="URL de la imagen" />
+      <ImageView fx:id="imagen" fitHeight="337.0" fitWidth="421.0" layoutX="484.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/fondo-listado.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAgregarHistorial" layoutX="300.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnAgregarHistorial" style="-fx-background-color: red;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+            <Button fx:id="btnEditarHistorialContinuar" layoutX="320.0" layoutY="442.0" mnemonicParsing="false" onAction="#btnEditarHistorialContinuar" text="Editar" />
+            <ComboBox fx:id="combo3" layoutX="222.0" layoutY="212.0" prefHeight="30.0" prefWidth="224.0" promptText="Seleccionar un producto" />
+            <Text fill="#000dff" layoutX="83.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_agregarProducto" nodeOrientation="LEFT_TO_RIGHT" prefHeight="889.0" prefWidth="1163.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="40.0" prefWidth="916.0" style="-fx-background-color: black;" text="Agregando Producto" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgProducto" fitHeight="400.0" fitWidth="532.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/fondo-Agrego1.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="558.0" layoutY="93.0" text="Nombre del producto:" textFill="#0332eb">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="558.0" layoutY="185.0" text="Tipo producto:" textFill="#041feb">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="559.0" layoutY="268.0" text="Condicion actual" textFill="#0009ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="370.0" />
+      <Label layoutX="559.0" layoutY="355.0" prefHeight="30.0" prefWidth="163.0" text="Fecha de ingreso" textFill="#0707ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textNombreP" layoutX="558.0" layoutY="135.0" prefHeight="31.0" prefWidth="249.0" promptText="Ingrese un nombre" />
+      <TextField fx:id="textCondicionP" layoutX="558.0" layoutY="298.0" prefHeight="31.0" prefWidth="249.0" promptText="Ingrese una condicion actual" />
+      <DatePicker fx:id="textFechaP" layoutX="559.0" layoutY="391.0" promptText="Eliga una fecha" />
+      <ComboBox fx:id="combo1" layoutX="854.0" layoutY="224.0" prefHeight="31.0" prefWidth="249.0" promptText="Seleccionar un tipo producto" />
+      <Button fx:id="btnAgregarP" layoutX="559.0" layoutY="474.0" mnemonicParsing="false" onAction="#btnAgregarProducto" style="-fx-background-color: red;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+            <TextField fx:id="textTipoProducto" layoutX="565.0" layoutY="224.0" prefHeight="21.0" prefWidth="239.0" promptText="Ingrese un tipo producto" />
+            <Button fx:id="btnEditarProductoContinuar" layoutX="715.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnEditarProductoContinuar" text="Editar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ventana_presentacion" prefHeight="889.0" prefWidth="1170.0" visible="false">
+         <children>
+            <MediaView fx:id="video" fitHeight="400.0" fitWidth="800.0" layoutX="185.0" layoutY="91.0" />
+            <Button layoutX="356.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnRegresarInicio" text="Regresar" />
+            <Button layoutX="486.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnReproducirAction" text="Reproducir" />
+            <Button layoutX="647.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnDetener" text="Detener" />
+            <Button layoutX="779.0" layoutY="614.0" mnemonicParsing="false" onAction="#btnPausar" text="Pausa" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
